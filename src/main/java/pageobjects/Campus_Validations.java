@@ -35,8 +35,13 @@ public WebDriver driver;
 	
 	
 	
-	public void applicationclick() {
-		application.click();
+	public boolean applicationclick() {
+	    try {
+	        application.click();
+	        return true;
+	    } catch (Exception e) {
+	        return false;
+	    }
 	}
 	
 	public void distributeclick() {

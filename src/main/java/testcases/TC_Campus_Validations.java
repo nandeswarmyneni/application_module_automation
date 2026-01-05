@@ -1,9 +1,11 @@
 package testcases;
 
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
+import pageobjects.Campus_Validations;
 import pageobjects.Loginobjects;
-import pageobjects.Version3objects;
+
 
 public class TC_Campus_Validations extends BaseClass {
 	
@@ -15,10 +17,17 @@ public class TC_Campus_Validations extends BaseClass {
 		login.sendUsernameAndPassword("emp33@test.com", "a765cbf2dc83768241383056f8d9a9f4");
 		
 		
-		Version3objects version3 = new Version3objects(driver);
+		Campus_Validations version3 = new Campus_Validations(driver);
 		
-		version3.applicationclick();
-		//Thread.sleep(3000);
+		
+		//applicationclick
+		if (version3.applicationclick()) {
+		    Reporter.log("Application menu clicked successfully", true);
+		} else {
+		    Reporter.log("FAILED: Application menu was NOT clicked", true);
+		}
+		
+		
 		version3.distributeclick();
 		version3.campaigndistrictdd();
 		version3.selectguntur();
