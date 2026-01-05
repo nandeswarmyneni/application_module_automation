@@ -1,5 +1,6 @@
 package testcases;
 
+import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
@@ -41,7 +42,11 @@ public class TC_Campus_Validations extends BaseClass {
 		version3.selectappfee();
 		version3.seriesdd();
 		version3.selectseries();
-		version3.enterrange();
+//		version3.enterrange();
+		boolean istrue = version3.validateRangeNotExceedApplicationCount("1");
+
+		Assert.assertTrue(istrue,"Range is not accepted more than available Application Count");
+		
 		version3.inserbtn();
 		version3.selectno();
 		//version3.selectyes();

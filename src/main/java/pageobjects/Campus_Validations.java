@@ -28,6 +28,7 @@ public WebDriver driver;
 	@FindBy(xpath = "//*[@id='option-0']") WebElement selappfee;
 	@FindBy(xpath = "//*[text()='Select Application Series']") WebElement series;
 	@FindBy(xpath = "//*[@id='option-0']") WebElement selseries;
+	@FindBy(xpath = "//*[@id = 'applicationCount']") WebElement appcount;
 	@FindBy(xpath = "//*[@id='range']") WebElement range;
 	@FindBy(xpath = "//*[text()='Insert']") WebElement insert;
 	@FindBy(xpath = "//*[text()='No']") WebElement no;
@@ -83,9 +84,33 @@ public WebDriver driver;
 	public void selectseries() {
 		selseries.click();
 	}
-	public void enterrange() {
-		range.sendKeys("1");
+	
+	public boolean validateRangeNotExceedApplicationCount(String rangeValue) {
+
+	    // Enter the range value
+	    //range.clear();
+	    range.sendKeys(rangeValue);
+
+	    // Read application count
+	    int applicationCount = Integer.parseInt(appcount.getAttribute("value"));
+
+	    // Read entered range value
+	    int enteredRange = Integer.parseInt(range.getAttribute("value"));
+
+	    // Check: range should not be greater than application count
+	    if (enteredRange <= applicationCount) {
+	        return true;
+	       
+	    } else {
+	        return false;
+	       
+	    }
 	}
+
+	
+//	public void enterrange() {
+//		range.sendKeys("1");
+//	}
 	public void inserbtn() {
 		insert.click();
 	}
