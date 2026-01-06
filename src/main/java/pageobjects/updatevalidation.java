@@ -1,5 +1,6 @@
 package pageobjects;
 
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -32,6 +33,9 @@ public class updatevalidation {
 //	@FindBy(xpath = "//*[contains(@class,'modal__WqjNz')]//*[text()='Select City Name']") WebElement city;
 //	@FindBy(xpath = "//*[@id='option-1']") WebElement selcity;
 	
+@FindBy(xpath = "(//*[contains(@class,'modal__GJ05L')]//*[@class='Dropdown_dropdown_button__BMIDC '])[6]")
+WebElement updateapplicatinfee;
+	
 	@FindBy(xpath = "//*[contains(@class,'modal__GJ05L')]//*[@id = 'applicationCount']")
 	WebElement updatappcount;
 	@FindBy(xpath = "//*[contains(@class,'modal__GJ05L')]//*[@id='range']")
@@ -60,6 +64,16 @@ public class updatevalidation {
 	public void prodd() {
 		pro.click();
 	}
+	
+	public boolean applicatinfee() {
+	    try {
+	    	waitutill.waitForClickable(updateapplicatinfee);
+	        return true;  
+	    } catch (TimeoutException e) {
+	        return false;  
+	    }
+	}
+
 //	public void citydd() {
 //		city.click();
 //	}

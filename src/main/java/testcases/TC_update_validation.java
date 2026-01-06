@@ -22,6 +22,10 @@ public class TC_update_validation extends BaseClass {
 		update.clickupdate();
 		update.issuedd();
 		update.prodd();
+		
+		boolean isClickable = update.applicatinfee();
+		Assert.assertFalse(isClickable,"Application fee field is clickable, but it should NOT be clickable");
+
 //		update.citydd();
 //		update.selectcity();
 		boolean isValid = update.validateRangeNotExceedApplicationCount("10");

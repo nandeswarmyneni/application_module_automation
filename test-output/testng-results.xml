@@ -1,30 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
-    <line>
-      <![CDATA[Application menu clicked successfully]]>
-    </line>
   </reporter-output>
-  <suite started-at="2026-01-05T13:38:09 IST" name="Default suite" finished-at="2026-01-05T13:38:17 IST" duration-ms="7853">
+  <suite started-at="2026-01-06T10:00:52 IST" name="Default suite" finished-at="2026-01-06T10:01:02 IST" duration-ms="9857">
     <groups>
     </groups>
-    <test started-at="2026-01-05T13:38:09 IST" name="Default test" finished-at="2026-01-05T13:38:17 IST" duration-ms="7853">
-      <class name="testcases.TC_Campus_Validations">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.TC_Campus_Validations@4c12331b]" started-at="2026-01-05T13:38:09 IST" name="setUp" finished-at="2026-01-05T13:38:14 IST" duration-ms="4104" status="PASS">
+    <test started-at="2026-01-06T10:00:52 IST" name="Default test" finished-at="2026-01-06T10:01:02 IST" duration-ms="9857">
+      <class name="testcases.TC_update_validation">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.TC_update_validation@4c12331b]" started-at="2026-01-06T10:00:52 IST" name="setUp" finished-at="2026-01-06T10:00:57 IST" duration-ms="4492" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="campus()[pri:0, instance:testcases.TC_Campus_Validations@4c12331b]" started-at="2026-01-05T13:38:14 IST" name="campus" finished-at="2026-01-05T13:38:17 IST" duration-ms="3674" status="FAIL">
+        <test-method signature="campus()[pri:0, instance:testcases.TC_update_validation@4c12331b]" started-at="2026-01-06T10:00:57 IST" name="campus" finished-at="2026-01-06T10:01:02 IST" duration-ms="5289" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Range is not accepted more than available Application Count expected [true] but found [false]]]>
+              <![CDATA[Application fee field is clickable, but it should NOT be clickable expected [false] but found [true]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Range is not accepted more than available Application Count expected [true] but found [false]
+              <![CDATA[java.lang.AssertionError: Application fee field is clickable, but it should NOT be clickable expected [false] but found [true]
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1590)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at testcases.TC_Campus_Validations.campus(TC_Campus_Validations.java:48)
+at org.testng.Assert.assertFalse(Assert.java:79)
+at testcases.TC_update_validation.campus(TC_update_validation.java:27)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -55,16 +52,13 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
-            <line>
-              <![CDATA[Application menu clicked successfully]]>
-            </line>
           </reporter-output>
         </test-method> <!-- campus -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.TC_Campus_Validations@4c12331b]" started-at="2026-01-05T13:38:17 IST" name="tearDown" finished-at="2026-01-05T13:38:17 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.TC_update_validation@4c12331b]" started-at="2026-01-06T10:01:02 IST" name="tearDown" finished-at="2026-01-06T10:01:02 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testcases.TC_Campus_Validations -->
+      </class> <!-- testcases.TC_update_validation -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
