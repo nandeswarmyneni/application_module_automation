@@ -24,7 +24,7 @@ public class TC_update_validation extends BaseClass {
 		update.prodd();
 		
 		boolean isClickable = update.applicatinfee();
-		Assert.assertFalse(isClickable,"Application fee field is clickable, but it should NOT be clickable");
+		Assert.assertFalse(isClickable,"Application fee is clicked, but it should NOT be clickable");
 
 //		update.citydd();
 //		update.selectcity();

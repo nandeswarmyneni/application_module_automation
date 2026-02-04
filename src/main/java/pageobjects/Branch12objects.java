@@ -5,34 +5,31 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Campus_Validations {
+public class Branch12objects {
 	
 public WebDriver driver;
 	
-	public Campus_Validations(WebDriver driver){
+	public Branch12objects(WebDriver driver){
 		this.driver = driver;
 		PageFactory.initElements(driver, this); 
 	}
 	
 	@FindBy(xpath = "//*[text()='Application']") WebElement application;
 	@FindBy(xpath = "//*[text()='Distribute']") WebElement distribute;
-	@FindBy(xpath = "//*[text()='Select Campaign District']") WebElement campaigndistrict;
-	@FindBy(xpath = "//*[text()='GUNTUR']") WebElement guntur;
-	@FindBy(xpath = "//*[text()='Select City Name']") WebElement city;
-	@FindBy(xpath = "//*[@id='option-1']") WebElement selcity;
-	@FindBy(xpath = "//*[text()='Select Branch Name']") WebElement branch;
-	@FindBy(xpath = "//*[@id='option-0']") WebElement branchname;
-	@FindBy(xpath = "//*[text()='Select Issued To']") WebElement issued;
-	@FindBy(xpath = "//*[@id='option-2']") WebElement issuedto;
+	@FindBy(xpath = "//*[text()='Select Branch Name']") WebElement branchname;
+	@FindBy(xpath = "//*[@id='option-0']") WebElement branch;
+	@FindBy(xpath = "//*[text()='Select Issued To']") WebElement issuedto;
+	@FindBy(xpath = "//*[@id='option-1']") WebElement issuename;
 	@FindBy(xpath = "//*[text()='Select Application Fee']") WebElement appfee;
-	@FindBy(xpath = "//*[@id='option-0']") WebElement selappfee;
-	@FindBy(xpath = "//*[text()='Select Application Series']") WebElement series;
-	@FindBy(xpath = "//*[@id='option-0']") WebElement selseries;
+	@FindBy(xpath = "//*[@id='option-0']") WebElement selfee;
+	@FindBy(xpath = "//*[text()='Select Application Series']") WebElement appses;
+	@FindBy(xpath = "//*[@id='option-1']") WebElement series;
 	@FindBy(xpath = "//*[@id = 'applicationCount']") WebElement appcount;
 	@FindBy(xpath = "//*[@id='range']") WebElement range;
 	@FindBy(xpath = "//*[text()='Insert']") WebElement insert;
 	@FindBy(xpath = "//*[text()='No']") WebElement no;
 	//@FindBy(xpath = "//*[text()='Yes']") WebElement yes;
+	
 	
 	
 	
@@ -48,43 +45,30 @@ public WebDriver driver;
 	public void distributeclick() {
 		distribute.click();
 	}
-	public void campaigndistrictdd() {
-		campaigndistrict.click();
-	}
-	public void selectguntur() {
-		guntur.click();
-	}
-	public void citydd() {
-		city.click();
-	}
-	public void selectcity() {
-		selcity.click();
-	}
-	public void branchdd() {
-		branch.click();
-	}
-	public void selectbranch() {
+	public void branchnamedd() {
 		branchname.click();
 	}
-	public void issueddd() {
-		issued.click();
+	public void branchselect() {
+		branch.click();
 	}
-	public void selectissuedto() {
+	public void issuedtodd() {
 		issuedto.click();
+	}
+	public void selectissuename() {
+		issuename.click();
 	}
 	public void appfeedd() {
 		appfee.click();
 	}
-	public void selectappfee() {
-		selappfee.click();
+	public void appfesel() {
+		selfee.click();
 	}
-	public void seriesdd() {
+	public void appsesdd() {
+		appses.click();
+	}
+	public void seriessel() {
 		series.click();
 	}
-	public void selectseries() {
-		selseries.click();
-	}
-	
 	public boolean validateRangeNotExceedApplicationCount(String rangeValue) {
 
 	    // Enter the range value

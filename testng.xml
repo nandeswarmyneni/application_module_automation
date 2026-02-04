@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="suiteTest">
+	<test name="applicationModuleV12">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class
+				name="testcases.TC_Branch12" />
+			<class
+				name="testcases.TC_Revert" />
+			<class name="testcases.TC_update12"/>
+		</classes>
+	</test>
+</suite>

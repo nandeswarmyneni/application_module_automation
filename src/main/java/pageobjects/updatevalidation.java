@@ -83,17 +83,17 @@ WebElement updateapplicatinfee;
 	
 	public boolean validateRangeNotExceedApplicationCount(String rangeValue) {
 
-	    // Enter the range value
-	    //range.clear();
+	    
+	   
 	    range.sendKeys(rangeValue);
 
-	    // Read application count
+	    
 	    int applicationCount = Integer.parseInt(updatappcount.getAttribute("value"));
 
-	    // Read entered range value
+	    
 	    int enteredRange = Integer.parseInt(range.getAttribute("value"));
 
-	    // Check: range should not be greater than application count
+	   
 	    if (enteredRange <= applicationCount) {
 	        return true;
 	       

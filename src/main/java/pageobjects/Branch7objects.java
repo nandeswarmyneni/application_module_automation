@@ -5,11 +5,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Campus_Validations {
+public class Branch7objects {
 	
 public WebDriver driver;
 	
-	public Campus_Validations(WebDriver driver){
+	public Branch7objects(WebDriver driver){
 		this.driver = driver;
 		PageFactory.initElements(driver, this); 
 	}
